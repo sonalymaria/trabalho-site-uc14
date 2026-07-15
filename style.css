@@ -1,0 +1,545 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+
+    background:#f5ffff;
+    color:#333;
+
+}
+
+
+
+/* NAVBAR */
+
+header{
+
+    width:90%;
+    margin:20px auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+}
+
+
+.logo{
+
+    display:flex;
+    align-items:center;
+
+    font-size:28px;
+    font-weight:bold;
+
+    color:#31bfc4;
+
+}
+
+
+
+/* fantasma da logo */
+
+.ghost{
+
+    width:40px;
+    height:40px;
+
+    background:#31bfc4;
+
+    border-radius:50% 50% 20% 20%;
+
+    margin-right:10px;
+
+    position:relative;
+
+    animation:floating 3s infinite;
+
+}
+
+
+.ghost:before,
+.ghost:after{
+
+    content:"";
+
+    position:absolute;
+
+    background:white;
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    top:13px;
+
+}
+
+
+.ghost:before{
+
+    left:10px;
+
+}
+
+
+.ghost:after{
+
+    right:10px;
+
+}
+
+
+
+
+nav{
+
+    display:flex;
+    gap:40px;
+
+}
+
+
+nav a{
+
+    text-decoration:none;
+    color:#222;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+nav a:hover{
+
+    color:#31bfc4;
+
+}
+
+
+
+.actions button{
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+}
+
+
+
+.login{
+
+    background:#31bfc4;
+
+    border:1px solid #ffffff!important;
+
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+}
+
+.login:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px
+    rgba(0,0,0,0,25);
+
+
+}
+
+
+.cart{
+
+    background:#31bfc4;
+
+    color:white;
+
+    margin-left:10px;
+
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+}
+
+.cart:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px
+    rgba(0,0,0,0,25);
+
+
+}
+
+
+
+/* BANNER */
+
+
+.banner{
+
+    width:90%;
+    margin:30px auto;
+
+    height:300px;
+
+    background:linear-gradient(135deg,#8ce8e8,#43c8d0);
+
+    border-radius:30px;
+
+    display:flex;
+
+
+    align-items:center;
+
+    justify-content:space-around;
+
+    overflow:hidden;
+
+    animation:fadeUp 1s;
+}
+
+
+
+.banner-text{
+
+    width:45%;
+    justify-content:space-around;
+    align-items:flex-start
+
+}
+
+
+
+.banner h1{
+
+    font-size:55px;
+
+    color:rgb(17, 17, 17);
+
+    
+
+}
+
+
+
+.banner p{
+
+    margin:30px 0;
+
+    color:rgb(8, 8, 8);
+
+    line-height:1.8;
+
+}
+
+
+
+.banner button{
+
+    background:white;
+
+    display:inline-block;
+
+    border:2px solid white;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.4s;
+
+}
+
+
+.banner button:hover{
+
+    transform:scale(1.1);
+    box-shadow:0px 10px 30px rgba(255,255,255,.4);
+
+}
+
+
+
+.banner img{
+
+    width:300px;
+
+    border-radius:20px;
+
+    animation:floating 4s infinite ease-in-out;
+
+}
+
+
+
+/* CONTEUDO */
+
+
+main{
+
+    width:90%;
+
+    margin:auto;
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+
+
+.products{
+
+    flex:3;
+
+}
+
+
+
+.products h2,
+.categories h2{
+
+    margin-bottom:20px;
+
+}
+
+
+
+.cards{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+
+
+.card{
+
+    background:white;
+
+    width:220px;
+
+    padding:20px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px #0002;
+
+    transition:.4s;
+
+    animation:show .8s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-15px);
+
+}
+
+
+
+.card img{
+
+    width:150px;
+
+    height:150px;
+
+    object-fit:contain;
+
+}
+
+
+
+.card h3{
+
+    margin:10px 0;
+
+}
+
+
+
+.price{
+
+    color:#31bfc4;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+
+
+.card button{
+
+    margin-top:15px;
+
+    border:none;
+
+    background:#31bfc4;
+
+    color:white;
+
+    padding:10px 25px;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+}
+
+
+
+.card button:hover{
+
+    background:#24999d;
+
+}
+
+
+
+/* CATEGORIAS */
+
+
+.categories{
+
+    flex:1;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    box-shadow:0 5px 20px #0002;
+
+}
+
+
+
+.category{
+
+    background:#e9ffff;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    border-radius:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.category:hover{
+
+    background:#31bfc4;
+
+    color:white;
+
+    transform:translateX(10px);
+
+}
+
+
+
+/* ANIMAÇÕES */
+
+
+@keyframes floating{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+
+
+@keyframes show{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* RESPONSIVO */
+
+
+@media(max-width:900px){
+
+    main{
+
+        flex-direction:column;
+
+    }
+
+
+    .cards{
+
+        flex-wrap:wrap;
+
+    }
+
+
+    nav{
+
+        display:none;
+
+    }
+
+}
